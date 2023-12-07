@@ -2,21 +2,26 @@ import React, { useState } from "react";
 import { StyleSheet, Text, View, TextInput, Button, Modal } from "react-native";
 //import punycode from "punycode/";  //for improving performance while running
 // (props(can be any name)) => this is arrow function.
-const InfoInput = (props) => {
+const Inputs = (props) => {
   const [enteredID, setEnteredID] = useState("");
-
-  const IDInputHandler = (enteredText) => {
-    setEnteredID(enteredText);
-  };
-
   const [enteredPassword, setEnteredPassword] = useState("");
 
-  const PasswordInputHandler = (enteredText) => {
-    setEnteredPassword(enteredText);
+  const IDInputHandler = (enteredText1) => {
+    setEnteredID(enteredText1);
   };
 
-  return(
-    <View style={styles.inputContainer}>
+  const PasswordInputHandler = (enteredText2) => {
+    setEnteredPassword(enteredText2);
+  };
+
+  const handleButtonPress = () => {
+    // Handle logic when the button is pressed
+    console.log("Entered ID:", enteredID);
+    console.log("Entered Password:", enteredPassword);
+  };
+
+  return (
+      <View style={styles.inputContainer}>
         <TextInput
           placeholder="Enter your ID"
           style={styles.input}
@@ -29,32 +34,36 @@ const InfoInput = (props) => {
           onChangeText={PasswordInputHandler}
           value={enteredPassword}
         />
-    </View>
-  );// End of return function.
-} // End of InfoInput function.
+        <View style={styles.ButtonContainer}>
+        <Button title="Sign in" color='#32926F' onPress={handleButtonPress} />
+        </View>
+      </View>
+  ); // End of return function.
+}; // End of InfoInput function.
 
 const styles = StyleSheet.create({
-    inputContainer: {
-      flex: 1,
-      justifyContent: "center",
-      alignItems: "center",
-    },
-    input: {
-      width: "80%",
-      paddingHorizontal: 10,
-      borderColor: "black",
-      borderWidth: 2,
-      marginBottom: 10,
-    },
-    ButtonContainer: {
-      flexDirection: "row",
-      justifyContent: "space-around",
-      width: "60%",
-      //padding: 10,
-      //borderColor: 'black',
-      //marginBottom: 10,
-    },
-  });
-  
-  export default InfoInput;
-
+  inputContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: 10,
+    marginVertical: 100,
+  },
+  input: {
+    width: '80%',
+    height: 40,
+    borderColor: 'gray',
+    borderWidth: 1,
+    marginBottom: 20,
+    paddingHorizontal: 10,
+  },
+  ButtonContainer: {
+    //flexDirection: "row",
+    justifyContent: "center",
+    width: "70%",
+    paddingTop: 20,
+    //padding: 10,
+    borderColor: 'black',
+    //marginBottom: 10,
+  },
+});
+export default Inputs;
