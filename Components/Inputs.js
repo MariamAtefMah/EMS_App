@@ -3,19 +3,31 @@ import { StyleSheet, Text, View, TextInput, Button, Modal } from "react-native";
 //import punycode from "punycode/";  //for improving performance while running
 // (props(can be any name)) => this is arrow function.
 const InfoInput = (props) => {
-  const [enteredInfo, setEnteredInfo] = useState("");
+  const [enteredID, setEnteredID] = useState("");
 
-  const InfoInputHandler = (enteredText) => {
-    setEnteredInfo(enteredText);
+  const IDInputHandler = (enteredText) => {
+    setEnteredID(enteredText);
+  };
+
+  const [enteredPassword, setEnteredPassword] = useState("");
+
+  const PasswordInputHandler = (enteredText) => {
+    setEnteredPassword(enteredText);
   };
 
   return(
     <View style={styles.inputContainer}>
         <TextInput
-          placeholder="Enter your name"
+          placeholder="Enter your ID"
           style={styles.input}
-          onChangeText={InfoInputHandler}
-          value={enteredInfo}
+          onChangeText={IDInputHandler}
+          value={enteredID}
+        />
+        <TextInput
+          placeholder="Enter your Password"
+          style={styles.input}
+          onChangeText={PasswordInputHandler}
+          value={enteredPassword}
         />
     </View>
   );// End of return function.
