@@ -11,13 +11,8 @@ export default function App() {
     <View style={styles.container}>
       <View style={styles.ViewContiner}>
         <View 
-            style={{
-              backgroundColor: '#2f3e46',
-              justifyContent: 'center',
-              alignItems: 'center',
-              flex: 2 
-              }}>
-          <Text style={{fontSize: 22, color: 'white'}}>صفحة تسجيل الدخول</Text>
+            style={styles.BarStyle}>
+          <Text style={styles.TextStyle}>صفحة تسجيل الدخول</Text>
         </View>
       </View>
       <Inputs/>
@@ -32,11 +27,22 @@ const styles = StyleSheet.create({
     marginVertical: 50, 
   },
   ViewContiner: {
-    padding: 30,
+    padding: 20,
     flexDirection: 'row',
     width: '100%',
-    height: 100, 
+    height: 80, 
     justifyContent: 'space-around',
     alignItems: 'stretch',
+    backgroundColor: '#2f3e46',
+  },
+  BarStyle: {
+    backgroundColor: '#2f3e46',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 2 
+  },
+  TextStyle: {
+    fontSize: 22,
+    color: 'white',
   },
 });
