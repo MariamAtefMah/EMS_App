@@ -17,7 +17,7 @@ export default function App() {
               alignItems: 'center',
               flex: 2 
               }}>
-          <Text style={{fontSize: 22}}>Sign in page</Text>
+          <Text style={{fontSize: 22}}>صفحة تسجيل الدخول</Text>
         </View>
       </View>
       <Inputs/>

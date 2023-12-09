@@ -23,19 +23,19 @@ const Inputs = (props) => {
   return (
       <View style={styles.inputContainer}>
         <TextInput
-          placeholder="Enter your ID"
+          placeholder="أدخل رقمك التعريفي."
           style={styles.input}
           onChangeText={IDInputHandler}
           value={enteredID}
         />
         <TextInput
-          placeholder="Enter your Password"
+          placeholder="أدخل كلمة السر الخاصة بك."
           style={styles.input}
           onChangeText={PasswordInputHandler}
           value={enteredPassword}
         />
         <View style={styles.ButtonContainer}>
-        <Button title="Sign in" color='#32926F' onPress={handleButtonPress} />
+        <Button title="تسجيل الدخول" color='#32926F' onPress={handleButtonPress} />
         </View>
       </View>
   ); // End of return function.
