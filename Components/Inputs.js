@@ -35,7 +35,7 @@ const Inputs = (props) => {
           value={enteredPassword}
         />
         <View style={styles.ButtonContainer}>
-        <Button title="تسجيل الدخول" color='#32926F' onPress={handleButtonPress} />
+        <Button title="تسجيل الدخول" color='#009973' onPress={handleButtonPress} />
         </View>
       </View>
   ); // End of return function.

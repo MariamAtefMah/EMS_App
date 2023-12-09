@@ -12,12 +12,12 @@ export default function App() {
       <View style={styles.ViewContiner}>
         <View 
             style={{
-              backgroundColor: '#00B5A2',
+              backgroundColor: '#2f3e46',
               justifyContent: 'center',
               alignItems: 'center',
               flex: 2 
               }}>
-          <Text style={{fontSize: 22}}>صفحة تسجيل الدخول</Text>
+          <Text style={{fontSize: 22, color: 'white'}}>صفحة تسجيل الدخول</Text>
         </View>
       </View>
       <Inputs/>
